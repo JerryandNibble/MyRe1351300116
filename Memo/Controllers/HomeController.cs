@@ -26,5 +26,11 @@ namespace Memo.Controllers
 
             return View();
         }
+
+        public ActionResult Welcome()
+        {
+            DateTime.Now.ToString();
+            return View();
+        }
     }
 }

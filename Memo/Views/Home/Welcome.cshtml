@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var a = 20;
+    var sum = 0;
+    for (int i = 1; i <= a; i++)
+    {
+        sum += i;
+    }
+}
+
+<h2>Welcome</h2>
+<div>结果:@sum</div>
