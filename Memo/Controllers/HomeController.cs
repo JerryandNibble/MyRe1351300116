@@ -27,9 +27,20 @@ namespace Memo.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult News()
+        {
+            String[] data = new string[] { "神十一与天宫对接成功 航天员“入宫”", "李克强：奋力开创东北全面振兴新局面", "孩子们还适不适合阅读“四大名著”" };
+            ViewBag.data = data;
+            return View();
+        }
+
         public ActionResult Welcome()
         {
-            DateTime.Now.ToString();
+            
             return View();
         }
     }
