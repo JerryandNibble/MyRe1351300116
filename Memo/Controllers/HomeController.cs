@@ -50,9 +50,14 @@ namespace Memo.Controllers
         /// 添加新闻
         /// </summary>
         /// <returns></returns>
-        public ActionResult Add()
+        public ActionResult Addnews()
         {
 
+            return View();
+        }
+
+        public ActionResult Save(string Title,string Content)
+        {
             return View();
         }
 
