@@ -28,14 +28,16 @@ namespace Memo.Controllers
         }
 
         /// <summary>
-        /// 
+        /// 新闻
         /// </summary>
         /// <returns></returns>
-        public ActionResult News()
+        public ActionResult News(int page = 10)
         {
             String[] data = new string[] { "神十一与天宫对接成功 航天员“入宫”", "李克强：奋力开创东北全面振兴新局面", "孩子们还适不适合阅读“四大名著”" };
             ViewBag.data = data;
+            ViewBag.Page = page;
             return View();
+
         }
 
         public ActionResult Welcome()
@@ -43,5 +45,16 @@ namespace Memo.Controllers
             
             return View();
         }
+
+        /// <summary>
+        /// 添加新闻
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Add()
+        {
+
+            return View();
+        }
+
     }
 }
