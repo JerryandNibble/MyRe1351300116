@@ -1,14 +1,15 @@
 ﻿
 @{
-    ViewBag.Title = "Addnews";
+    ViewBag.Title = "AddArticle";
 }
 
-<h2>添加新闻</h2>
+<h2>添加博客</h2>
 <form action="/Home/Save" method="get">
     <table class="table table-bordered">
-        <tr> @*第一行*@
-            <td>新闻标题:</td>
-            <td><input type="text" name="Title" value=""/></td> @*第二列*@
+        <tr>
+            @*第一行*@
+            <td>博客标题:</td>
+            <td><input type="text" name="Title" value="" /></td> @*第二列*@
         </tr>
         <tr>
             <td>添加内容:</td>
@@ -23,4 +24,5 @@
         </tr>
     </table>
 </form>
+
 
