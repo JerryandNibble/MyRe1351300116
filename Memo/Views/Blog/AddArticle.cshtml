@@ -1,19 +1,30 @@
-﻿
+﻿@model BlogArticle
 @{
     ViewBag.Title = "AddArticle";
 }
 
 <h2>添加博客</h2>
-<form action="/Blog/ArticleSave" method="post">
+@*<form action="/Blog/ArticleSave" method="post">*@
+@using (Html.BeginForm("ArticleSave", "Blog"))
+{
+    @Html.ValidationSummary()
+
     <table class="table table-bordered">
-        <tr>
-            @*第一行*@
+        <tr>@*第一行*@ 
             <td>博客标题:</td>
-            <td><input type="text" name="subject" value="" /></td> @*第二列*@
+          @*<td><input type="text" name="subject" value="" /></td> @*第二列*@ 
+            <td>
+                @Html.TextBoxFor(o=>o.Subject)
+                @Html.ValidationMessageFor(o=>o.Subject)
+            </td>
         </tr>
         <tr>
             <td>添加内容:</td>
-            <td><textarea name="body" class="form-control"  cols="60" rows="4"></textarea></td>
+            @*<td><textarea name="body" class="form-control"  cols="60" rows="4"></textarea></td>*@
+            <td>
+                @Html.TextAreaFor(o => o.Body, new { style = "width:500px;max-width:1000px;" })
+                @Html.ValidationMessageFor(o => o.Body)
+            </td>
         </tr>
         <tr>
             <td></td>
@@ -23,6 +34,7 @@
             </td>
         </tr>
     </table>
-</form>
+}
+@*</form>*@
 
 
