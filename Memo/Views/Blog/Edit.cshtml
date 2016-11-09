@@ -14,6 +14,7 @@
             @*<td><input type="text" name="Subject" value="@Model.Subject" />  </td>*@
             <td>
                 @Html.TextBox("Subject")
+                @Html.ValidationMessageFor(o => o.Subject)
             </td>
         </tr>
         <tr>
@@ -21,6 +22,7 @@
             <td>
                 @*<textarea name="Body" cols="60" rows="4" style="width:600px; max-width:1000px;">@Model.Body</textarea>*@
                 @Html.TextArea("Body", new { style = "width:600px; max-width:1000px;" })
+                @Html.ValidationMessageFor(o => o.Body)
             </td>
         </tr>
         <tr>
