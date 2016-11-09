@@ -22,7 +22,7 @@
             <td>添加内容:</td>
             @*<td><textarea name="body" class="form-control"  cols="60" rows="4"></textarea></td>*@
             <td>
-                @Html.TextAreaFor(o => o.Body, new { style = "width:500px;max-width:1000px;" })
+                @Html.TextAreaFor(o => o.Body, new { style = "width:500px;max-width:600px;" })
                 @Html.ValidationMessageFor(o => o.Body)
             </td>
         </tr>
